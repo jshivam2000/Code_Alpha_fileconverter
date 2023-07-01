@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: palevioletred;
+    min-height: 100vh;
+}
+.Convert{
+    width: 450px;
+    border-radius: 7px;
+    background: white;
+    padding: 30px 25px 40px;
+}
+.Convert:where(textarea input select button){
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+.Convert textarea{
+    height: 270px;
+    resize: none;
+    padding: 8px 13px;
+    border: 1px solid green;
+}
+.Convert .file-options{
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+.file-options .option{
+    width: cal(100% /2 - 8px);
+}
+.option :where(input, .Select-menu){
+    height: 50px;
+    padding: 0 15px;
+    margin-top: 6px;
+    border-radius: 5px;
+    border: 1px solid red;
+}
+.option .Select-menu select{
+    height: 50px;
+    background: none;
+}
+.Convert .save-btn{
+    color: blue;
+    margin-top: 20px;
+    padding: 16px 0;
+    cursor: pointer;
+    opacity: 0.6;
+    background: turquoise;
+    pointer-events: none;   
+}
+.Convert textarea:valid ~ .save-btn{
+    opacity: 1;
+    pointer-events: auto;
+}
+
